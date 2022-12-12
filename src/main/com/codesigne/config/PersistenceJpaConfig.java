@@ -20,7 +20,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "main.com.codesigne.dao")
+@EnableJpaRepositories(basePackages = "main.com.codesigne.services")
 @PropertySource("classpath:database.properties")
 public class PersistenceJpaConfig {
 
