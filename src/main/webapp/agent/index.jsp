@@ -149,49 +149,49 @@
                                 </thead>
 
                                 <tbody class="divide-y divide-gray-200">
-                                <c:forEach var="dos" items="${dossiers}" >
-                                    <tr>
-                                        <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                                            ${dos.number}
-                                        </td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">
-                                            ${dos.patientNumber}
-                                        </td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">
-                                            <fmt:formatDate value="${dos.appliedDate}" pattern="yyyy-MM-dd" />
-                                        </td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700 ">
-                                            <fmt:formatNumber type="number" maxFractionDigits="2" value="${dos.amount}"/> DH
-                                        </td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">
-                                            <c:if test="${ dos.status == 'PENDING'}" >
-                                                <strong class="rounded bg-amber-100 px-3 py-1.5 text-xs font-medium text-amber-700" >
-                                                    Pending
-                                                </strong>
-                                            </c:if>
-                                            <c:if test="${ dos.status == 'REJECTED'}" >
-                                                <strong class="rounded bg-red-100 px-3 py-1.5 text-xs font-medium text-red-700">
-                                                    Rejected
-                                                </strong>
-                                            </c:if>
-                                            <c:if test="${ dos.status == 'ACCEPTED'}" >
-                                                <strong class="rounded bg-green-100 px-3 py-1.5 text-xs font-medium text-green-700" >
-                                                    Accepted
-                                                </strong>
-                                            </c:if>
-                                        </td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700 flex">
-                                            <c:if test="${dos.status == 'PENDING'}" >
-                                                <a href="/agent/reject/${dos.id}">
-                                                    <svg class="w-7 h-7 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
-                                                </a>
-                                                <a href="/agent/accept/${dos.id}">
-                                                    <svg class="w-7 h-7 text-green-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                                </a>
-                                            </c:if>
-                                        </td>
-                                    </tr>
-                                </c:forEach>
+<%--                                <c:forEach var="dos" items="${dossiers}" >--%>
+<%--                                    <tr>--%>
+<%--                                        <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">--%>
+<%--                                            ${dos.number}--%>
+<%--                                        </td>--%>
+<%--                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">--%>
+<%--                                            ${dos.patientNumber}--%>
+<%--                                        </td>--%>
+<%--                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">--%>
+<%--                                            <fmt:formatDate value="${dos.appliedDate}" pattern="yyyy-MM-dd" />--%>
+<%--                                        </td>--%>
+<%--                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700 ">--%>
+<%--                                            <fmt:formatNumber type="number" maxFractionDigits="2" value="${dos.amount}"/> DH--%>
+<%--                                        </td>--%>
+<%--                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">--%>
+<%--                                            <c:if test="${ dos.status == 'PENDING'}" >--%>
+<%--                                                <strong class="rounded bg-amber-100 px-3 py-1.5 text-xs font-medium text-amber-700" >--%>
+<%--                                                    Pending--%>
+<%--                                                </strong>--%>
+<%--                                            </c:if>--%>
+<%--                                            <c:if test="${ dos.status == 'REJECTED'}" >--%>
+<%--                                                <strong class="rounded bg-red-100 px-3 py-1.5 text-xs font-medium text-red-700">--%>
+<%--                                                    Rejected--%>
+<%--                                                </strong>--%>
+<%--                                            </c:if>--%>
+<%--                                            <c:if test="${ dos.status == 'ACCEPTED'}" >--%>
+<%--                                                <strong class="rounded bg-green-100 px-3 py-1.5 text-xs font-medium text-green-700" >--%>
+<%--                                                    Accepted--%>
+<%--                                                </strong>--%>
+<%--                                            </c:if>--%>
+<%--                                        </td>--%>
+<%--                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700 flex">--%>
+<%--                                            <c:if test="${dos.status == 'PENDING'}" >--%>
+<%--                                                <a href="/agent/reject/${dos.id}">--%>
+<%--                                                    <svg class="w-7 h-7 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>--%>
+<%--                                                </a>--%>
+<%--                                                <a href="/agent/accept/${dos.id}">--%>
+<%--                                                    <svg class="w-7 h-7 text-green-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>--%>
+<%--                                                </a>--%>
+<%--                                            </c:if>--%>
+<%--                                        </td>--%>
+<%--                                    </tr>--%>
+<%--                                </c:forEach>--%>
                                 </tbody>
                             </table>
                         </div>

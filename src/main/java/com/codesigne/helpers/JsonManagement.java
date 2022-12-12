@@ -16,7 +16,7 @@ public class JsonManagement {
     public static Double readFile(String codeMed){
         AtomicReference<String> price = new AtomicReference<>("0.0");
         JSONParser jsParser = new JSONParser();
-        try(FileReader reader = new FileReader("/env/medications.json")){
+        try(FileReader reader = new FileReader("C:\\Users\\laghr\\Desktop\\macnss_project\\SpringMvc\\medications.json")){
             Object obj = jsParser.parse(reader);
             JSONArray medList = (JSONArray) obj;
             System.out.println(medList);

@@ -7,9 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-@EnableWebMvc
-@Configuration
-@ComponentScan({ "com.codesigne.repositories" })
+
 public class CodesigneConfig implements WebMvcConfigurer {
 
 
@@ -18,7 +16,7 @@ public class CodesigneConfig implements WebMvcConfigurer {
     public InternalResourceViewResolver resolver(){
         InternalResourceViewResolver  resolver = new InternalResourceViewResolver();
         resolver.setViewClass(JstlView.class);
-        resolver.setPrefix("/views/");
+//        resolver.setPrefix("/views/");
         resolver.setSuffix(".jsp");
         return resolver;
     }
