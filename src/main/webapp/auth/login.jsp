@@ -17,7 +17,7 @@
         <!-- component -->
         <div class="flex items-center justify-center h-screen">
             <!-- Login Container -->
-            <form:form action="/login" modelAttribute="person" method="post">
+                <form:form action="/login" modelAttribute="person" method="post">
                 <div class="min-w-fit flex-col border bg-white px-6 py-14 shadow-md rounded-[4px] ">
                     <div class="mb-8 flex justify-center">
                         <img class="w-24" src="https://imgs.search.brave.com/HtbJt6kxB1qcEzxTPBikAh7Y05ioSmMpGMvnMElbtJk/rs:fit:748:512:1/g:ce/aHR0cHM6Ly9yYWRp/b3RldG91YW4ubWEv/d3AtY29udGVudC91/cGxvYWRzLzIwMTkv/MDcvY25zcy5sb2dv/Xy5qcGc" alt="" />
