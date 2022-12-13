@@ -13,7 +13,7 @@
         <title>Title</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body class="bg-sky-50">
         <!-- component -->
         <div class="flex items-center justify-center h-screen">
             <!-- Login Container -->
@@ -64,7 +64,7 @@
                         </div>
                     </fieldset>
 
-                    <button class="mt-5 w-full border p-2 bg-gradient-to-r from-cyan-900 bg-cyan-500 text-white rounded-[4px] hover:bg-cyan-800 scale-105 duration-300" type="submit">Login</button>
+                    <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm px-5 mt-5 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Login</button>
                     <div class="mt-5 flex text-center text-sm text-gray-400">
                         <p>
                             This site is protected by reCAPTCHA and the Google <br />

@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.swing.text.html.parser.AttributeList;
 import java.util.Map;
 
 @Controller
@@ -63,6 +64,7 @@ public class AuthController {
                     auth.setLoggedInUser(admin);
                     auth.setRole(Enum.role.ADMIN.toString());
                     model.addAttribute("authPerson", auth);
+                    
                     System.out.println(model.getAttribute("authPerson"));
                     return new ModelAndView("redirect:/admin");
                 }else{

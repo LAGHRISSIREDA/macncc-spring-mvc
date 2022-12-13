@@ -10,7 +10,7 @@
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="h-full">
+    <body class="h-full ">
         <div class="min-h-full">
             <div class="bg-cyan-600 pb-32">
                 <nav class="bg-cyan-500 border-b border-cyan-100 border-opacity-25 lg:border-none">
